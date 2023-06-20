@@ -3,14 +3,12 @@
 
 /**
   * _abs - computes the absolute value
-  * @int: is the integer to compute
+  * @n: is the integer to compute
   * Return: 0
 */
 
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	if (n >= 0)
 	{
 		return (n);
