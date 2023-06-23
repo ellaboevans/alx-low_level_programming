@@ -8,31 +8,17 @@
 
 int main(void)
 {
-	long int n;
-	long int max;
-	long int i;
+	int c;
+	long num = 612852475143;
 
-	n = 612852475143;
-	max = -1;
-
-	while (n % 2 == 0)
+	for (c = (int) sqrt(num); c > 2; c++)
 	{
-		max = 2;
-		n /= 2;
-	}
-
-	for (i = 3; i <= sqrt(n); i += 2)
-	{
-		while (n % 1 == 0)
+		if (num % c == 0)
 		{
-			max = i;
-			n /= i;
+			printf("%d\n", c);
+			break;
 		}
 	}
-
-	if (n > 2)
-		max = n;
-	printf("%ld\n", max);
 
 	return (0);
 }
